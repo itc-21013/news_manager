@@ -1,13 +1,16 @@
+/*
+ * Auto-generated file. Created by MyBatis Generator
+ */
 package jp.ac.it_college.std.s21013.news_manager.infrastructure.database.record
 
 import java.time.LocalDateTime
 
-data class BundledNewsRecord(
+data class News(
     var id: Long? = null,
     var title: String? = null,
-    var body: String? = null,
-    var category: String? = null,
+    var categoryId: Long? = null,
     var publishAt: LocalDateTime? = null,
     var createAt: LocalDateTime? = null,
-    var postBy: String? = null
+    var userId: Long? = null,
+    var body: String? = null
 )
