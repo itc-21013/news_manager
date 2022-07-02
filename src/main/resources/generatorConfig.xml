@@ -15,6 +15,7 @@
                 connectionURL="jdbc:mariadb://127.0.0.1:3306/news_release"
                 userId="news"
                 password="s21013">
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <javaTypeResolver>
             <property name="useJSR310Types" value="true"/>
@@ -28,10 +29,10 @@
                 targetProject="src/main/kotlin">
         </javaClientGenerator>
         <table tableName="category"/>
+        <table tableName="news"/>
         <table tableName="users">
             <columnOverride column="role_type" typeHandler="org.apache.ibatis.type.EnumTypeHandler"
                             javaType="jp.ac.it_college.std.s21013.news_manager.domain.enum.RoleType"/>
         </table>
-        <table tableName="news"/>
     </context>
 </generatorConfiguration>
